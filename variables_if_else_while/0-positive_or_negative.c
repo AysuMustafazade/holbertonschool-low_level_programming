@@ -1,10 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
-
 /**
- * main - generates a random number and prints whether it is positive, 
- * zero, or negative
+ * main - Entry point 
  * 
  * Return: Always 0 (Success)
  */
