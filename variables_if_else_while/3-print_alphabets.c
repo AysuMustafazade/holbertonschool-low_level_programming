@@ -2,13 +2,14 @@
 
 /**
  * main - Entry point
- * Description: Prints the alphabet in lowercase
+ * Description: Prints the alphabet in lowercase and uppercase
  * Return: Always 0 (Success)
  */
 int main(void)
 {
 	char ch = 'a';
-    char c = 'A';
+	char c = 'A';
+
 	while (ch <= 'z')
 	{
 		putchar(ch);
