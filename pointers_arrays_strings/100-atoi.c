@@ -25,30 +25,30 @@ int _atoi(char *s)
 		{
 			started = 1;
 			digit = s[i] - '0';
-            
-            if (sign == 1)
-            {
-                if (num < (INT_MIN + digit) / 10)
-                    return (INT_MAX);
-                
-                num = num * 10 - digit;
-            }
-            else
-            {
-                if (num < INT_MIN / 10 || (num == INT_MIN / 10 && digit > 8))
-                    return (INT_MIN);
 
-                num = num * 10 - digit;
-            }
+			if (sign == 1)
+			{
+				if (num < (INT_MIN + digit) / 10)
+					return (INT_MAX);
+
+				num = num * 10 - digit;
+			}
+			else
+			{
+				if (num < INT_MIN / 10 || (num == INT_MIN / 10 && digit > 8))
+					return (INT_MIN);
+
+				num = num * 10 - digit;
+			}
 		}
 		else if (started)
 			break;
 
 		i++;
 	}
-    
-    if (sign == 1)
-        return (-num);
-    
-    return (num);
+
+	if (sign == 1)
+		return (-num);
+
+	return (num);
 }
