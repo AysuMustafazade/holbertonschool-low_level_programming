@@ -1,8 +1,9 @@
 #include "main.h"
-#include <stddef.h> /* NULL istifadə etmək üçün tələb olunur */
+#include <stddef.h>
 
 /**
- * _strstr - Locates the first occurrence of the substring needle in the string haystack.
+ * _strstr -Locates the first occurrence of the substring needle
+ * in the string haystack.
  * @haystack: The string to be searched.
  * @needle: The substring to be located.
  *
