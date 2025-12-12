@@ -2,27 +2,27 @@
 #include <unistd.h>
 
 /**
- * puts_half - prints half of a string
- * @str: the string to process
+ * puts_half - prints second half of a string
+ * @str: string input
  */
 void puts_half(char *str)
 {
-    int len = 0;
-    int start = 0;
+	int len = 0;
+	int start = 0;
 
-    while (str[len] != '\0')
-        len++;
+	while (str[len] != '\0')
+		len++;
 
-    if (len % 2 == 0)
-        start = len / 2;
-    else
-        start = (len + 1) / 2;
+	if (len % 2 == 0)
+		start = len / 2;
+	else
+		start = (len + 1) / 2;
 
-    while (start < len)
-    {
-        write(1, &str[start], 1);
-        start++;
-    }
+	while (start < len)
+	{
+		write(1, &str[start], 1);
+		start++;
+	}
 
-    write(1, "\n", 1);
+	write(1, "\n", 1);
 }
