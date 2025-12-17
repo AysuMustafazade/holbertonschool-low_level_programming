@@ -2,7 +2,7 @@
 #include <unistd.h>
 
 /**
- * puts_recursion - prints a string followed by a new line using recursion
+ * _puts_recursion - prints a string followed by a new line using recursion
 * @s: pointer to the string to be printed
  *
  * Return: void
