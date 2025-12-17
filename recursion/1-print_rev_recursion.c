@@ -2,7 +2,7 @@
 #include <unistd.h>
 
 /**
- * _print_rev_recursion - prints a string in reverse using recursion1-print_rev_recursion.c
+ * _print_rev_recursion - prints a string in reverse using recursion
  * @s: pointer to the string to be printed in reverse
  *
  * Return: void
