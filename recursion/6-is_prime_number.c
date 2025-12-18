@@ -13,11 +13,11 @@ int is_prime_number(int n)
     int i = 1;
 	while (i < n)
     {
-        int k = n / i;
+        int k = n % i;
         i++ ;
-		return (int k);
+		return (k);
 
-	if (int k == 0)
+	if (k == 0)
 	{	return (1);
     }
 	else
