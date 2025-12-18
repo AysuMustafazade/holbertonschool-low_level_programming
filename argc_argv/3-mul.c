@@ -9,7 +9,7 @@
  */
 int main(int argc , char *argv[] __attribute__((unused)))
 {
-	int a, int b;
+	int a, b;
 
 	if (argc < 2)
 {
@@ -20,4 +20,5 @@ int main(int argc , char *argv[] __attribute__((unused)))
     printf("%d\n", a*b);
     return (0);
 }
+    return(0);
 }
