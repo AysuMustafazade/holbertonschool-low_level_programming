@@ -18,27 +18,26 @@ void print_all(const char * const format, ...)
 
 	while (format && format[i])
 	{
-		printf("%s", sep);
-
-		if (format[i] == 'c')
-			printf("%c", va_arg(ap, int));
-
-		if (format[i] == 'i')
-			printf("%d", va_arg(ap, int));
-
-		if (format[i] == 'f')
-			printf("%f", va_arg(ap, double));
-
-		if (format[i] == 's')
+		switch (format[i])
 		{
-			s = va_arg(ap, char *);
-			printf("%s", s ? s : "(nil)");
-		}
-
-		if (format[i] == 'c' || format[i] == 'i' ||
-		    format[i] == 'f' || format[i] == 's')
+		case 'c':
+			printf("%s%c", sep, va_arg(ap, int));
 			sep = ", ";
-
+			break;
+		case 'i':
+			printf("%s%d", sep, va_arg(ap, int));
+			sep = ", ";
+			break;
+		case 'f':
+			printf("%s%f", sep, va_arg(ap, double));
+			sep = ", ";
+			break;
+		case 's':
+			s = va_arg(ap, char *);
+			printf("%s%s", sep, s ? s : "(nil)");
+			sep = ", ";
+			break;
+		}
 		i++;
 	}
 
