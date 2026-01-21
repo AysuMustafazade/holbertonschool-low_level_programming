@@ -143,7 +143,7 @@ void copy_file(int fd_from, int fd_to,
  *
  * Exit with code 100 on failure
  */
- 
+
 void close_fd(int fd)
 {
 	if (close(fd) == -1)
