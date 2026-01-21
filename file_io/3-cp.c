@@ -32,6 +32,12 @@ int main(int argc, char *argv[])
 
 	return (0);
 }
+/**
+ * check_args - checks number of arguments
+ * @argc: argument count
+ *
+ * Exit with code 97 if argument count is incorrect
+ */
 
 void check_args(int argc)
 {
@@ -41,6 +47,12 @@ void check_args(int argc)
 		exit(97);
 	}
 }
+/**
+ * open_file_from - opens source file for reading
+ * @filename: name of the source file
+ *
+ * Return: file descriptor on success, exits on failure
+ */
 
 int open_file_from(char *filename)
 {
@@ -56,6 +68,13 @@ int open_file_from(char *filename)
 
 	return (fd);
 }
+/**
+ * open_file_to - opens or creates destination file
+ * @filename: name of the destination file
+ * @fd_from: source file descriptor
+ *
+ * Return: destination file descriptor, exits on failure
+ */
 
 int open_file_to(char *filename, int fd_from)
 {
@@ -74,6 +93,13 @@ int open_file_to(char *filename, int fd_from)
 
 	return (fd_to);
 }
+/**
+ * copy_file - copies content from one file to another
+ * @fd_from: source file descriptor
+ * @fd_to: destination file descriptor
+ * @file_from: source file name
+ * @file_to: destination file name
+ */
 
 void copy_file(int fd_from, int fd_to,
 	char *file_from, char *file_to)
@@ -111,7 +137,13 @@ void copy_file(int fd_from, int fd_to,
 		exit(98);
 	}
 }
-
+/**
+ * close_fd - closes a file descriptor
+ * @fd: file descriptor to close
+ *
+ * Exit with code 100 on failure
+ */
+ 
 void close_fd(int fd)
 {
 	if (close(fd) == -1)
